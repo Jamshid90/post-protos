@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package post;
+
+import "post/message.proto";
+
+service PostService{
+    rpc Create(PostCreateRequest) returns(PostCreateResponse);  
+    rpc Read(PostReadRequest) returns(PostReadResponse);  
+    rpc Update(PostUpdateRequest) returns(PostUpdateResponse);  
+    rpc Delete(PostDeleteRequest) returns(PostDeleteResponse);  
+    rpc List(PostListRequest) returns(PostListResponse);   
+}

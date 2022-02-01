@@ -1,0 +1,66 @@
+syntax="proto3";
+
+package post;
+
+message Post { 
+    int64 id = 1;
+    int64 userID = 2;
+    string title = 3;
+    string body = 4;
+    string updatedAt = 5;
+    string createdAt = 6;
+}
+
+//  create
+message PostCreateRequest {
+    int64 id = 1;
+    int64 userID = 2;
+    string title = 3;
+    string body = 4;
+}
+
+message PostCreateResponse{
+    Post post = 1;
+}
+
+//  read
+message PostReadRequest {
+    int64 id = 1;
+}
+
+message PostReadResponse{
+    Post post = 1;
+}
+
+//  update
+message PostUpdateRequest {
+    int64 id = 1;
+    int64 userID = 2;
+    string title = 3;
+    string body = 4;
+}
+
+message PostUpdateResponse{
+    Post post = 1;
+}
+
+//  delete
+message PostDeleteRequest {
+    int64 id = 1;
+}
+
+message PostDeleteResponse{
+    int32 code = 1;
+}
+
+//  list
+message PostListRequest {
+    uint64 limit = 1;
+    uint64 offset = 2;
+    map<string, string> filter=3;
+}
+
+message PostListResponse {
+    repeated Post list = 1;
+}
+

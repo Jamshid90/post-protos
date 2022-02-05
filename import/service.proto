@@ -1,0 +1,9 @@
+syntax="proto3";
+
+package import;
+
+import "import/message.proto";
+
+service ImportService{
+    rpc Import(ImportRequest) returns(ImportResponse);  
+}

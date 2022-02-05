@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package import;
+
+//  import request
+message ImportRequest {
+    int64 quantity=1;
+}
+
+//  import response{
+message ImportResponse{
+    int64 number_of_created=1;
+}

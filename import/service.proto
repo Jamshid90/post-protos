@@ -1,8 +1,9 @@
 syntax="proto3";
 
 package import;
+option go_package="genproto/import";
 
-import "import/message.proto";
+import "message.proto";
 
 service ImportService{
     rpc Import(ImportRequest) returns(ImportResponse);  

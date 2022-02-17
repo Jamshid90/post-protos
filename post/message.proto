@@ -1,6 +1,7 @@
 syntax="proto3";
 
 package post;
+option go_package="genproto/post";
 
 message Post { 
     int64 id = 1;

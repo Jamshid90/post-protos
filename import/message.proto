@@ -1,6 +1,7 @@
 syntax="proto3";
 
 package import;
+option go_package="genproto/import";
 
 //  import request
 message ImportRequest {
